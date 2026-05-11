@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SnapRollup — Fast Summaries for Google Sheets™</title>
+  <meta name="description" content="An add-on for Google Sheets™ that groups rows and computes summary metrics in seconds. Sum, average, max, min, count, and mode in a single click.">
+  <link rel="icon" type="image/png" href="logo-32.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <a href="index.html" class="brand">
+      <img src="logo-32.png" alt="SnapRollup">
+      <span class="brand-name">SnapRollup</span>
+    </a>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="support.html">Support</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <img src="logo-128.png" alt="SnapRollup logo" class="hero-logo">
+    <h1>Fast summaries for your spreadsheets</h1>
+    <p class="lead">
+      Group rows, compute metrics, and obtain a clean summary sheet in seconds.
+      No formulas, no complex pivot tables.
+    </p>
+    <a href="#features" class="btn">See what it does</a>
+  </section>
+
+  <section class="block" id="features">
+    <h2>What SnapRollup does</h2>
+    <p>
+      SnapRollup is an add-on for Google Sheets™ that reads the data in your active sheet,
+      groups it by a column of your choice, and computes the metrics you need.
+      The result is written to a new sheet named <strong>"Resumen"</strong> within the same file.
+    </p>
+
+    <div class="features">
+      <div class="feature">
+        <h3>Simple grouping</h3>
+        <p>Pick any column to group by (customers, products, dates, categories) and SnapRollup builds the summary automatically.</p>
+      </div>
+      <div class="feature">
+        <h3>Six operations</h3>
+        <p>Sum, average, count, maximum, minimum, and mode. Apply them to multiple columns in a single pass.</p>
+      </div>
+      <div class="feature">
+        <h3>Fast and lightweight</h3>
+        <p>Processes thousands of rows in memory without blocking the spreadsheet. Single-pass read and write.</p>
+      </div>
+      <div class="feature">
+        <h3>Your data stays in place</h3>
+        <p>All processing runs inside your own Google account. No data is transmitted to external servers.</p>
+      </div>
+      <div class="feature">
+        <h3>Works across all your sheets</h3>
+        <p>Once installed, SnapRollup is available from the side panel in every spreadsheet you open.</p>
+      </div>
+      <div class="feature">
+        <h3>Minimal permissions</h3>
+        <p>Access is limited to the file you open the add-on in. Other files in your drive are not accessed.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2>How to use it</h2>
+    <ol>
+      <li>Open any spreadsheet containing tabular data.</li>
+      <li>Open SnapRollup from the right-hand side panel.</li>
+      <li>Click <strong>"Load columns"</strong>.</li>
+      <li>Choose the column you want to group by.</li>
+      <li>Add one or more metrics (column + operation).</li>
+      <li>Click <strong>"Generate Summary"</strong>.</li>
+    </ol>
+    <p>Done. A sheet named "Resumen" is created (or overwritten) with the results.</p>
+  </section>
+
+  <section class="block">
+    <h2>Permissions requested</h2>
+    <p>SnapRollup requests only the permissions strictly required for its functionality:</p>
+    <ul>
+      <li><strong>Access to the active file only</strong>: limited to the spreadsheet in which the add-on is opened, not to other files in your drive.</li>
+      <li><strong>Read and write access within that file</strong>: needed to read your data and write the "Resumen" output sheet.</li>
+    </ul>
+    <p>
+      For more details, please review our <a href="privacy.html">Privacy Policy</a>.
+    </p>
+  </section>
+
+  <section class="block">
+    <h2>Need help?</h2>
+    <p>
+      If you encounter an issue, have a suggestion, or want to report a bug,
+      please visit the <a href="support.html">Support page</a>.
+    </p>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p>
+    © 2026 SnapRollup
+    <br>
+    <a href="index.html">Home</a> ·
+    <a href="support.html">Support</a> ·
+    <a href="privacy.html">Privacy</a> ·
+    <a href="terms.html">Terms</a>
+  </p>
+  <p class="trademark-notice">
+    Google Sheets™, Google Workspace™, Google Drive™, and Google Apps Script™ are trademarks of Google LLC.
+    SnapRollup is an independent product and is not affiliated with, sponsored by, or endorsed by Google LLC.
+  </p>
+</footer>
+
+</body>
+</html>
