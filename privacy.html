@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Política de Privacidad — SnapRollup</title>
+  <link rel="icon" type="image/png" href="logo-32.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <a href="index.html" class="brand">
+      <img src="logo-32.png" alt="SnapRollup">
+      <span class="brand-name">SnapRollup</span>
+    </a>
+    <nav class="site-nav">
+      <a href="index.html">Inicio</a>
+      <a href="support.html">Soporte</a>
+      <a href="privacy.html">Privacidad</a>
+      <a href="terms.html">Términos</a>
+    </nav>
+  </div>
+</header>
+
+<main class="legal">
+
+  <h1>Política de Privacidad</h1>
+  <p class="updated">Última actualización: 8 de mayo de 2026</p>
+
+  <p>
+    Esta Política de Privacidad describe cómo SnapRollup ("la aplicación", "el add-on")
+    maneja la información cuando usás el complemento dentro de Google Sheets.
+    SnapRollup fue diseñado con un principio simple: <strong>procesar tus datos sin enviarlos
+    a ningún servidor externo</strong>.
+  </p>
+
+  <h2>1. Qué información recopila SnapRollup</h2>
+  <p>
+    <strong>SnapRollup no recopila, almacena ni transmite información personal a servidores externos.</strong>
+    Toda la lógica del add-on se ejecuta dentro del entorno de Google Apps Script,
+    bajo tu propia cuenta de Google.
+  </p>
+  <p>
+    Cuando usás SnapRollup, el código accede a:
+  </p>
+  <ul>
+    <li>El contenido de la planilla de Google Sheets que tenés abierta en el momento de usar el add-on.</li>
+    <li>Tu selección de columnas y operaciones, que se guarda temporalmente en la caché de tu sesión de usuario para mantener el formulario entre clics.</li>
+  </ul>
+
+  <h2>2. Cómo se usa esa información</h2>
+  <p>
+    La información de la planilla se usa exclusivamente para:
+  </p>
+  <ul>
+    <li>Leer los datos de la hoja activa que vos elegiste procesar.</li>
+    <li>Calcular las métricas (suma, promedio, conteo, máximo, mínimo, moda) que vos solicitaste.</li>
+    <li>Escribir los resultados en una hoja llamada "Resumen" dentro de la misma planilla.</li>
+  </ul>
+  <p>
+    Los datos <strong>nunca se envían a servidores externos</strong>, ni a terceros, ni al desarrollador.
+    El procesamiento ocurre íntegramente dentro de la infraestructura de Google.
+  </p>
+
+  <h2>3. Permisos solicitados (OAuth scopes)</h2>
+  <p>
+    SnapRollup solicita los siguientes permisos mínimos:
+  </p>
+  <ul>
+    <li>
+      <code>https://www.googleapis.com/auth/spreadsheets.currentonly</code> —
+      Permite leer y escribir solo en la planilla actualmente abierta. No tiene acceso a otras planillas de tu Drive.
+    </li>
+    <li>
+      <code>https://www.googleapis.com/auth/drive.file</code> —
+      Permite trabajar con el archivo en el que se abrió el add-on. Limitado al alcance de archivo (file-scope).
+    </li>
+    <li>
+      <code>https://www.googleapis.com/auth/script.locale</code> —
+      Permite respetar la zona horaria y configuración regional del usuario al formatear fechas en los resultados.
+    </li>
+  </ul>
+
+  <h2>4. Almacenamiento temporal (caché)</h2>
+  <p>
+    Para preservar la configuración del formulario mientras navegás dentro del add-on
+    (por ejemplo, cuando agregás o quitás métricas), SnapRollup guarda temporalmente
+    el estado de la interfaz en el <strong>CacheService</strong> de Google Apps Script,
+    asociado únicamente a tu cuenta de usuario.
+  </p>
+  <p>
+    Esta caché:
+  </p>
+  <ul>
+    <li>Expira automáticamente a los 30 minutos de inactividad.</li>
+    <li>Es accesible solamente por tu propia sesión.</li>
+    <li>No contiene los datos de tu planilla, solo metadata de la interfaz (nombres de columnas seleccionadas, operación elegida, etc.).</li>
+  </ul>
+
+  <h2>5. Cookies y tracking</h2>
+  <p>
+    SnapRollup no utiliza cookies, no tiene scripts de tracking, ni servicios de analítica de terceros.
+  </p>
+
+  <h2>6. Compartir información con terceros</h2>
+  <p>
+    SnapRollup <strong>no comparte ninguna información con terceros</strong>. No hay servidores externos,
+    no hay APIs de terceros llamadas desde el add-on, no hay integraciones con servicios externos.
+  </p>
+
+  <h2>7. Cumplimiento con la política de Google</h2>
+  <p>
+    SnapRollup cumple con los <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener">Requisitos de la Política de Datos del Usuario de los Servicios de la API de Google</a>,
+    incluyendo los requisitos de Uso Limitado.
+  </p>
+
+  <h2>8. Eliminación de datos</h2>
+  <p>
+    Como SnapRollup no almacena datos en ningún servidor, no hay nada que eliminar del lado del desarrollador.
+    Si querés revocar el acceso del add-on a tu cuenta de Google, podés hacerlo en cualquier momento desde
+    <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener">https://myaccount.google.com/permissions</a>.
+  </p>
+
+  <h2>9. Cambios en esta política</h2>
+  <p>
+    Si esta política cambia en el futuro, la versión actualizada se publicará en esta misma página
+    con su fecha de última actualización. Los cambios significativos también se comunicarán en la página principal.
+  </p>
+
+  <h2>10. Contacto</h2>
+  <p>
+    Si tenés preguntas sobre esta política de privacidad, podés escribir a través de la
+    <a href="support.html">página de soporte</a>.
+  </p>
+
+</main>
+
+<footer class="site-footer">
+  <p>
+    © 2026 SnapRollup
+    <br>
+    <a href="index.html">Inicio</a> ·
+    <a href="support.html">Soporte</a> ·
+    <a href="privacy.html">Privacidad</a> ·
+    <a href="terms.html">Términos</a>
+  </p>
+</footer>
+
+</body>
+</html>
